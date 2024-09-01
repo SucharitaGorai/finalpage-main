@@ -1,0 +1,113 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .home-container {
+    display: flex;
+    padding: 20px;
+    background-color: #fffde7;
+    height: calc(100vh - 290px); /* Adjusted to account for the banner and padding */
+  }
+  
+  .left-column {
+    width: 20%;
+    /* margin-right: 20px; */
+    right:0;
+    border-right: 2px solid #fbc02d;
+    padding-right: 10px;
+    background-color: #ffeb3b;
+    padding: 20px;
+    height: auto;
+    border-radius: 20%;
+    position: fixed;
+  }
+  
+  .left-column h2 {
+    font-size: 20px;
+    color: #333;
+    background-color: transparent; /* Ensure no background color */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .left-column a {
+    color: #1976d2; 
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: 2px solid #1976d2;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  .left-column a:hover {
+    background-color: #1976d2;
+    color: #fff; 
+    text-decoration: none;
+  }
+  
+  .right-section {
+    width: 80%;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: to give a subtle shadow effect */
+    border: 2px solid #fbc02d; /* Optional: Add a border around the section */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align items horizontally */
+    background-color: #fff; /* Set background color to white or any desired color */
+  }
+  
+  
+  .right-section h2 {
+    font-size: 28px; /* Adjust the font size as needed */
+    color: #333; /* Dark color for the text */
+    font-weight: bold;
+    margin: 0; /* Remove default margin */
+    padding: 10px 0; /* Add padding for spacing */
+    text-align: center; /* Center-align text */
+    border-bottom: 2px solid #fbc02d; /* Optional: Add a border at the bottom for emphasis */
+  }
+  
+  
+  .alert-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Align alert text to the left */
+  }
+  
+  .blinking-text {
+    font-size: 20px;
+    color: #d32f2f; /* Alert color */
+    font-weight: bold;
+    animation: blink 1s step-start infinite;
+    justify-items: center;
+  }
+  
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .home-container {
+      flex-direction: column;
+    }
+  
+    .left-column {
+      width: 100%;
+      margin-right: 0;
+      padding-right: 0;
+      border-right: none;
+      border-bottom: 2px solid #fbc02d;
+      margin-bottom: 20px;
+    }
+  
+    .right-section {
+      width: 100%;
+    }
+  }
